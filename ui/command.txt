@@ -1,0 +1,3 @@
+pyuic6 rsa_win.ui -o rsa_win.py
+pip install -U pyinstaller
+pyinstaller main.py
