@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>RsaWindow</class>
+ <widget class="QMainWindow" name="RsaWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -66,7 +66,7 @@
      <widget class="QPushButton" name="btn_random_prime_nums">
       <property name="geometry">
        <rect>
-        <x>250</x>
+        <x>240</x>
         <y>200</y>
         <width>131</width>
         <height>23</height>
@@ -182,7 +182,7 @@
      <widget class="QSpinBox" name="sb_max_prime_num">
       <property name="geometry">
        <rect>
-        <x>140</x>
+        <x>130</x>
         <y>200</y>
         <width>91</width>
         <height>22</height>
@@ -206,6 +206,32 @@
       </property>
       <property name="text">
        <string>Генерация простых чисел</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_save_generated_keys">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>130</y>
+        <width>141</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Сохранить</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_exit_in_main">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>320</y>
+        <width>131</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>В меню</string>
       </property>
      </widget>
     </widget>
@@ -293,8 +319,8 @@
      <widget class="QPushButton" name="btn_save_encrypt">
       <property name="geometry">
        <rect>
-        <x>440</x>
-        <y>310</y>
+        <x>10</x>
+        <y>320</y>
         <width>141</width>
         <height>23</height>
        </rect>
@@ -353,6 +379,19 @@
       </property>
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_exit_in_main_2">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>320</y>
+        <width>131</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>В меню</string>
       </property>
      </widget>
     </widget>
@@ -427,8 +466,8 @@
      <widget class="QPushButton" name="btn_save_decrypt">
       <property name="geometry">
        <rect>
-        <x>440</x>
-        <y>310</y>
+        <x>10</x>
+        <y>320</y>
         <width>141</width>
         <height>23</height>
        </rect>
@@ -502,10 +541,33 @@
        <string>Результат дешифрования</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="btn_exit_in_main_3">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>320</y>
+        <width>131</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>В меню</string>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_main">
+   <property name="text">
+    <string>Главное</string>
+   </property>
+  </action>
+  <action name="action_vigenere">
+   <property name="text">
+    <string>Шифр Виженера</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
