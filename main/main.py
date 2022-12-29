@@ -1,16 +1,16 @@
 import random
-from PyQt6 import QtWidgets, QtCore, QtGui
+from PyQt6 import QtWidgets, QtGui
 import sys
 
 from PyQt6.QtWidgets import QFileDialog, QApplication
 
-from rsa.rsa import generate_keys, decrypt_message, encrypt_message
-from sha_256.hash_sha_256 import sha_256
-from ui.main_win import Ui_MainWindow
-from ui.rsa_win import Ui_RsaWindow
-from ui.sha_win import Ui_ShaWindow
-from ui.vigenere_win import Ui_VigenereWindow
-from vigenere.vigenere_algorithm import vigenere_encrypt, vigenere_decrypt
+from rsa import generate_keys, decrypt_message, encrypt_message
+from hash_sha_256 import sha_256
+from main_win import Ui_MainWindow
+from rsa_win import Ui_RsaWindow
+from sha_win import Ui_ShaWindow
+from vigenere_win import Ui_VigenereWindow
+from vigenere_algorithm import vigenere_encrypt, vigenere_decrypt
 
 
 class RsaWindow(QtWidgets.QMainWindow, Ui_RsaWindow):
@@ -392,7 +392,9 @@ class ShaWindow(QtWidgets.QMainWindow, Ui_ShaWindow):
 
 def main():
     app = QApplication(sys.argv)
+    app.setWindowIcon(QtGui.QIcon('private_key.ico'))
     window = MainWindow()
+    window.setWindowIcon(QtGui.QIcon('private_key.ico'))
     window.show()
     app.exec()
 

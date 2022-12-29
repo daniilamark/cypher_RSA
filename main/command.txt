@@ -7,3 +7,7 @@ pyuic6 sha_win.ui -o sha_win.py
 
 pip install -U pyinstaller
 pyinstaller main.py
+
+
+pip install auto-py-to-exe
+auto-py-to-exe
