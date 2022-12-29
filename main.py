@@ -35,11 +35,12 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def insertGenerateRandomPrimeNum(self):
         try:
+            max_prime_num = int(self.sb_max_prime_num.text())
             self.btn_random_prime_nums.setEnabled(0)
-            first = str(generateRandomPrimeNum(0, 100))
+            first = str(generateRandomPrimeNum(0, max_prime_num))
             self.le_first_prime_num.setText(str(first))
 
-            second = str(generateRandomPrimeNum(0, 100))
+            second = str(generateRandomPrimeNum(0, max_prime_num))
             self.le_second_prime_num.setText(second)
 
             self.statusbar.showMessage("Числа сгенерированы успешно")
